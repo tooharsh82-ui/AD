@@ -1,0 +1,6 @@
+{
+  "name": "The Ankit Photography",
+  "description": "Premium photography studio in Begusarai, Bihar. Documenting genuine celebrations, bridal portraits, and emotional stories through elegant, cinematic imagery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
