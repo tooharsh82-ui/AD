@@ -54,28 +54,23 @@ export default function App() {
   const [notes, setNotes] = useState('');
 
   // Brand Data Constants
-  const PHONE_NUMBER = '+91 86770 16013';
-  const PHONE_NUMBER_CLEAN = '918677016013';
-  const STUDIO_LOCATION = 'Chanakya Nagar, Begusarai, Mohan Eghu, Bihar 851101, India';
-  const PLUS_CODE = 'C47W+V3 Begusarai, Bihar';
-  const MAP_DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=25.4552467,86.11585255`;
-  const WHATSAPP_BASE_URL = `https://wa.me/${PHONE_NUMBER_CLEAN}`;
+  const PHONE_NUMBER = '+00 00000 00000';
+  const PHONE_NUMBER_CLEAN = '0000000000';
+  const STUDIO_LOCATION = 'Your Location, Your City';
+  const PLUS_CODE = 'XXXX+XX Your City';
+  const MAP_DIRECTIONS_URL = '#';
+  const WHATSAPP_BASE_URL = '#';
 
   // Helper to generate WhatsApp links
   const getWhatsAppLink = (text: string) => {
-    return `${WHATSAPP_BASE_URL}?text=${encodeURIComponent(text)}`;
+    return '#';
   };
 
   // Handle Form Submission
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `Hi The Ankit Photography, I would like to inquire about planning a session!
-• Occasion: ${occasion}
-• Name: ${name || 'Not provided'}
-• Tentative Date: ${date || 'Not provided'}
-• Notes: ${notes || 'None'}`;
-    
-    window.open(getWhatsAppLink(message), '_blank');
+    // Neutral placeholder behavior for showcase demo
+    console.log('Form submission simulated:', { occasion, name, date, notes });
   };
 
   // Portfolio items matching screenshots but styled elegantly with verified assets
@@ -200,7 +195,7 @@ export default function App() {
           {/* Logo Brand Zone (Top Bar Contract: Single text element) */}
           <a href="#" className="flex items-center gap-2 text-sm md:text-base font-extrabold tracking-widest text-white uppercase group">
             <span className="w-2.5 h-2.5 bg-purple-500 rounded-full inline-block animate-pulse"></span>
-            THE ANKIT <span className="text-purple-400 font-light">PHOTOGRAPHY</span>
+            PHOTOGRAPHY <span className="text-purple-400 font-light">STUDIO</span>
           </a>
 
           {/* Nav links Zone 2 */}
@@ -222,7 +217,7 @@ export default function App() {
               <span>{PHONE_NUMBER}</span>
             </a>
             <a 
-              href={getWhatsAppLink('Hi The Ankit Photography, I would like to book a photography session.')}
+              href={getWhatsAppLink('Hi, I am looking to schedule a wedding/portrait session.')}
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white px-5 py-2.5 rounded-full text-xs font-bold tracking-wider transition-all shadow-md shadow-purple-950/50"
@@ -289,7 +284,7 @@ export default function App() {
                 <span>Call {PHONE_NUMBER}</span>
               </a>
               <a 
-                href={getWhatsAppLink('Hi, I am looking to schedule a wedding/portrait session with you.')}
+                href={getWhatsAppLink('Hi, I am looking to schedule a wedding/portrait session.')}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-purple-600 text-white py-3 rounded-xl text-sm font-bold tracking-wider"
@@ -310,7 +305,7 @@ export default function App() {
           <div className="hidden xl:flex absolute left-4 top-[400px] -rotate-90 origin-left items-center gap-4 text-[10px] font-bold tracking-[0.3em] text-gray-500 uppercase">
             <span>PHOTOGRAPHY</span>
             <span className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
-            <span>BEGUSARAI, BIHAR</span>
+            <span>DESIGN SHOWCASE</span>
           </div>
 
           {/* Left Column Content */}
@@ -319,7 +314,7 @@ export default function App() {
             {/* Pill/Label */}
             <div className="inline-flex">
               <span className="bg-purple-950/60 border border-purple-900/50 text-[10px] md:text-xs font-bold tracking-widest text-purple-300 py-1.5 px-4 rounded-full uppercase">
-                • LUXURY WEDDING & PORTRAIT ATELIER • BEGUSARAI, BIHAR
+                • LUXURY WEDDING & PORTRAIT ATELIER • DESIGN SHOWCASE
               </span>
             </div>
 
@@ -334,7 +329,7 @@ export default function App() {
 
             {/* Supporting Paragraph */}
             <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-xl">
-              Thoughtful photography that preserves genuine emotions, meaningful celebrations, and unforgettable moments through timeless imagery. Proudly serving Chanakya Nagar, Begusarai, Bihar.
+              Thoughtful photography that preserves genuine emotions, meaningful celebrations, and unforgettable moments through timeless imagery.
             </p>
 
             {/* Trust Indicator Card (Screenshot 1: Preserving custom card aesthetic) */}
@@ -344,14 +339,14 @@ export default function App() {
               </div>
               <div className="flex flex-col gap-1">
                 <div className="flex items-center gap-2">
-                  <span className="font-bold text-sm text-white">4.9 Star Google Business Rating</span>
+                  <span className="font-bold text-sm text-white">4.9 Star Verified Client Rating</span>
                   <div className="flex items-center text-yellow-500 text-xs">
                     <Star className="w-3 h-3 fill-yellow-500" />
                     <span className="ml-0.5 text-xs font-bold text-yellow-500">4.9</span>
                   </div>
                 </div>
                 <p className="text-xs text-purple-200/80 leading-relaxed">
-                  Highly acclaimed across 167+ verified client reviews for premium cinematic bridal portraits, candid celebrations, and heirloom album designs.
+                  Highly acclaimed across verified client reviews for premium cinematic bridal portraits, candid celebrations, and heirloom album designs.
                 </p>
               </div>
             </div>
@@ -359,12 +354,12 @@ export default function App() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4 mt-2">
               <a 
-                href={getWhatsAppLink('Hi The Ankit Photography, I saw your portfolio and would love to chat.')}
+                href={getWhatsAppLink('Hi, I saw your photography portfolio showcase and would love to chat.')}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs tracking-widest px-8 py-4 rounded-full transition-all shrink-0 shadow-lg shadow-purple-950/40"
               >
-                <span>CHAT ON WHATSAPP ↗</span>
+                <span>GET IN TOUCH ↗</span>
               </a>
               <a 
                 href="#works"
@@ -418,11 +413,11 @@ export default function App() {
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-[10px] font-bold tracking-widest text-purple-400 uppercase">REVIEWS</span>
-              <span className="text-2xl md:text-3xl font-extrabold text-white font-mono tracking-tight">167+ Google</span>
+              <span className="text-2xl md:text-3xl font-extrabold text-white font-mono tracking-tight">000+ Verified</span>
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-[10px] font-bold tracking-widest text-purple-400 uppercase">STUDIO</span>
-              <span className="text-2xl md:text-3xl font-extrabold text-white tracking-tight">Begusarai</span>
+              <span className="text-2xl md:text-3xl font-extrabold text-white tracking-tight">Your Studio</span>
             </div>
           </div>
 
@@ -458,7 +453,7 @@ export default function App() {
 
             <div className="text-gray-300 text-sm md:text-base leading-relaxed flex flex-col gap-6 mt-4">
               <p>
-                At <strong className="text-white font-semibold">The Ankit Photography</strong>, our studio in Chanakya Nagar, Begusarai, Bihar is built on quiet observation rather than stage direction. We believe the true spirit of an Indian wedding lives in the unscripted pauses—the quiet tear during the Kanyadaan, the grandfather’s gentle hand on the groom’s shoulder, and the sheer wedding celebration of the family.
+                At our <strong className="text-white font-semibold">Photography Studio</strong>, our creative work is built on quiet observation rather than stage direction. We believe the true spirit of a beautiful celebration lives in the unscripted pauses—the quiet tear, the gentle hand on a shoulder, and the sheer joy of the family celebration.
               </p>
               <p>
                 With every assignment, our dedicated team brings fine-art sensibilities, cinema-grade optics, and respectful cultural understanding to document your family’s heirloom milestones.
@@ -515,7 +510,7 @@ export default function App() {
             </div>
             <div className="max-w-md">
               <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-                A chronological glimpse of royal brides, quiet tears, laughter in the rain, and sacred heritage across Bihar.
+                A chronological glimpse of royal brides, quiet tears, laughter in the rain, and sacred moments of love.
               </p>
               <div className="mt-2 flex items-center gap-2 text-xs text-purple-300 font-medium">
                 <span className="w-1.5 h-1.5 bg-purple-500 rounded-full animate-ping inline-block" />
@@ -748,13 +743,13 @@ export default function App() {
 
                 <div className="flex flex-wrap items-center gap-3">
                   <a 
-                    href={getWhatsAppLink('Hi The Ankit Photography, I would like to book an appointment to talk about wedding planning.')}
+                    href={getWhatsAppLink('Hi, I would like to book an appointment to talk about session planning.')}
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold tracking-widest px-6 py-3.5 rounded-full transition-all"
                   >
                     <MessageSquare className="w-3.5 h-3.5" />
-                    <span>CHAT ON WHATSAPP ↗</span>
+                    <span>GET IN TOUCH ↗</span>
                   </a>
                   <a 
                     href={`tel:${PHONE_NUMBER}`}
@@ -779,7 +774,7 @@ export default function App() {
                   <Sparkles className="w-5 h-5 text-purple-400 shrink-0 mt-0.5" />
                   <div>
                     <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-1">ON-LOCATION</h4>
-                    <p className="text-xs text-gray-400">Available Across Bihar & India</p>
+                    <p className="text-xs text-gray-400">Available Worldwide</p>
                   </div>
                 </div>
               </div>
@@ -836,7 +831,7 @@ export default function App() {
                     <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Short Note or Questions</label>
                     <textarea 
                       rows={3}
-                      placeholder="e.g. Looking for 2-day wedding & candid coverage in Begusarai" 
+                      placeholder="e.g. Looking for professional photography coverage" 
                       value={notes}
                       onChange={(e) => setNotes(e.target.value)}
                       className="bg-[#0f051d] border border-purple-950/80 rounded-xl px-4 py-3 text-xs text-white placeholder-gray-600 focus:border-purple-600 focus:outline-none transition-colors resize-none"
@@ -848,7 +843,7 @@ export default function App() {
                     className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs tracking-widest py-4 rounded-xl transition-all shadow-md cursor-pointer mt-2"
                   >
                     <MessageSquare className="w-4 h-4" />
-                    <span>SEND INQUIRY VIA WHATSAPP</span>
+                    <span>SEND INQUIRY</span>
                   </button>
                 </form>
               </div>
@@ -873,7 +868,7 @@ export default function App() {
                 <div className="flex flex-col gap-2">
                   <div className="flex flex-col">
                     <span className="text-[9px] font-bold tracking-widest text-purple-400 uppercase">PLUS CODE: {PLUS_CODE.split(' ')[0]}</span>
-                    <h4 className="text-base font-bold text-white mt-1">The Ankit Photography</h4>
+                    <h4 className="text-base font-bold text-white mt-1">Photography Studio</h4>
                     <p className="text-xs text-gray-400 mt-1 leading-relaxed">
                       {STUDIO_LOCATION}
                     </p>
@@ -881,8 +876,6 @@ export default function App() {
                   <div className="flex items-center gap-4 mt-2">
                     <a 
                       href={MAP_DIRECTIONS_URL}
-                      target="_blank" 
-                      rel="noopener noreferrer"
                       className="flex items-center gap-1.5 text-xs font-bold tracking-wider text-purple-400 hover:text-purple-300 transition-colors uppercase"
                     >
                       <span>Get Directions</span>
@@ -896,10 +889,10 @@ export default function App() {
               <div className="bg-[#140827] border border-purple-950/80 p-2 rounded-3xl shadow-xl overflow-hidden aspect-[4/3] relative flex flex-col justify-between">
                 <div className="w-full h-full rounded-2xl overflow-hidden relative">
                   
-                  {/* Real Interactive Map via Iframe pointing to Begusarai */}
+                  {/* Real Interactive Map via Iframe pointing to generic location */}
                   <iframe 
-                    title="The Ankit Photography Location Map in Begusarai"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.3155353591963!2d86.11585255!3d25.4552467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f216ff255291b5%3A0x7d67ff9bdf9753c2!2sBegusarai%2C%20Bihar!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                    title="Photography Studio Location Map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d-122.0!3d37.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sYour+City!5e0!3m2!1sen!2sin!4v1700000000000"
                     width="100%" 
                     height="100%" 
                     style={{ border: 0 }} 
@@ -912,8 +905,8 @@ export default function App() {
                   {/* Little location card embedded on top-left of the map just like in screenshots */}
                   <div className="absolute top-4 left-4 bg-[#0f051d]/90 backdrop-blur-md border border-purple-950 p-3 rounded-xl max-w-[200px]">
                     <div className="flex flex-col">
-                      <span className="font-extrabold text-[10px] text-white">Begusarai</span>
-                      <span className="text-[9px] text-purple-400 mt-0.5">Bihar 851101, India</span>
+                      <span className="font-extrabold text-[10px] text-white">Your Studio</span>
+                      <span className="text-[9px] text-purple-400 mt-0.5">Your City, Your Country</span>
                     </div>
                   </div>
                 </div>
@@ -923,8 +916,6 @@ export default function App() {
                   <span>GOOGLE MAPS INTERACTIVE VIEW</span>
                   <a 
                     href={MAP_DIRECTIONS_URL}
-                    target="_blank" 
-                    rel="noopener noreferrer"
                     className="hover:text-white transition-colors flex items-center gap-1 text-[11px]"
                   >
                     <span>Open full screen ↗</span>
@@ -943,7 +934,7 @@ export default function App() {
         
         {/* Giant faded background text (Preserving design in Screenshot 9) */}
         <div className="absolute bottom-[-20px] left-1/2 -translate-x-1/2 text-[140px] md:text-[220px] font-black tracking-widest text-purple-950/5 pointer-events-none uppercase font-sans select-none whitespace-nowrap">
-          THE ANKIT
+          STUDIO
         </div>
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
@@ -955,10 +946,10 @@ export default function App() {
             <div className="lg:col-span-5 flex flex-col gap-4">
               <span className="flex items-center gap-2 text-sm md:text-base font-extrabold tracking-widest text-white uppercase">
                 <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-                THE ANKIT <span className="text-purple-400 font-light">PHOTOGRAPHY</span>
+                PHOTOGRAPHY <span className="text-purple-400 font-light">STUDIO</span>
               </span>
               <p className="text-xs text-gray-400 leading-relaxed max-w-sm mt-1">
-                Thoughtful visual storytelling turning genuine moments into timeless heirloom memories. Dedicated to documenting the beautiful heritage celebrations of Bihar and beyond.
+                Thoughtful visual storytelling turning genuine moments into timeless heirloom memories. Dedicated to documenting your beautiful heritage celebrations.
               </p>
             </div>
 
@@ -1014,11 +1005,11 @@ export default function App() {
 
           {/* Copyright Row */}
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] font-bold tracking-wider text-gray-500 uppercase">
-            <span>© 2026 THE ANKIT PHOTOGRAPHY</span>
+            <span>© 2026 PHOTOGRAPHY STUDIO</span>
             <div className="flex items-center gap-2">
               <span>ALL RIGHTS RESERVED</span>
               <span>•</span>
-              <span>BEGUSARAI, BIHAR</span>
+              <span>STUDIO LOCATION</span>
             </div>
           </div>
 
@@ -1028,13 +1019,11 @@ export default function App() {
       {/* FIXED FLOATING WHATSAPP BUTTON (SCREENSHOTS 1-9) */}
       <div className="fixed bottom-6 right-6 z-40">
         <a 
-          href={getWhatsAppLink('Hi The Ankit Photography, I would like to inquire about your premium services.')}
-          target="_blank" 
-          rel="noopener noreferrer"
+          href={getWhatsAppLink('Inquiry from Photography Studio Showcase')}
           className="flex items-center gap-2 bg-[#090214] hover:bg-[#130728] text-white border border-purple-950/80 px-4.5 py-3 rounded-full shadow-2xl transition-transform hover:-translate-y-1 duration-300 font-bold text-xs tracking-wider group"
         >
           <span className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></span>
-          <span className="text-[10px] tracking-widest">WHATSAPP STUDIO</span>
+          <span className="text-[10px] tracking-widest">CONTACT STUDIO</span>
           <MessageSquare className="w-4 h-4 text-purple-400 group-hover:text-purple-300" />
         </a>
       </div>
@@ -1105,9 +1094,7 @@ export default function App() {
               {/* Inquiry Action */}
               <div className="pt-6 border-t border-purple-950/40 mt-6 flex flex-col gap-3">
                 <a 
-                  href={getWhatsAppLink(`Hi The Ankit Photography, I saw your beautiful photo "${activeLightbox.title}" in your archive and would love to ask some questions.`)}
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                  href={getWhatsAppLink(`Hi, I saw your beautiful photo "${activeLightbox.title}" in your archive and would love to ask some questions.`)}
                   className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs tracking-widest py-3 rounded-xl transition-all"
                 >
                   <MessageSquare className="w-4 h-4" />
